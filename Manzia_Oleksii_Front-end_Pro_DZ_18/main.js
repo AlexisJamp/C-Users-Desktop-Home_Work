@@ -2,12 +2,13 @@
 let num = prompt('Enter number: ');
 let degree = prompt('Enter degree: ');
 
-function degreeFunction(num){
-    return function(degree){
-        return num ** degree;
+function pow(num, degree){
+    if (num == 1){
+        return num;
+    } else {
+        return num ** degree
     }
 }
 
-const increase = degreeFunction(degree);
 
-console.log(increase(num));
+console.log(pow(num, degree));

@@ -1,64 +1,87 @@
-// ДЗ 21
-
+// Дз 21
 class Person {
-    constructor(name, gender){
-        this.name = name;
-        this.gender = gender;
+    constructor(name, gender) {
+      this.name = name;
+      this.gender = gender;
     }
-}
-
-class Appartament{
-    livingPeople = [];
-
-    addPeople(){
-        this.livingPeople.push(Person.name);
+  }
+  
+  class Apartment {
+    people = [];
+  
+    addPerson(person) {
+      this.people.push(person.name);
     }
-    showAppartment(){
-        console.log(this.livingPeople)
+  
+    showPeople() {
+      console.log(this.people);
     }
-}
-
-class Building{
-    Apps = [];
-    maxNum = 10;
+  }
+  
+  class Building {
+    apartments = [];
+    constructor() {
+      this.maxNumber = 10;
+    }
     
-    constructor(maxNum){
-        this.maxNum = maxNum;
-    }
-
-    ifMore(Appartament){
-        if(this.Apps.length < maxNum){
-            this.Apps.push(Appartament.livingPeople)
+    
+    addApartment(apartment) {
+        if (this.apartments.length < this.maxNumber){
+            this.apartments.push(apartment);
         }
-        else{console.log('Building is full of strangers, find another')}
+        else{
+            console.log('Full of people')
         }
-    
-    addApp(){
-        this.Apps.push(Appartament.livingPeople)
+      
     }
-    
-    showBuilding(){
-        console.log(this.Apps)
+  
+    showApartments() {
+      console.log("Apartments in the building:", this.apartments);
     }
-}
+  }
+  
+
+  const john = new Person("John", "male");
+  const mary = new Person("Mary", "female");
+  const jack = new Person('Jack', 'male');
+  const luci = new Person('Luci', 'female');
+  const paul = new Person('Paul', 'male');
+  const chen = new Person('Chen', 'male');
+  
+  const apartment = new Apartment();
+  const apartment2 = new Apartment();
+  const apartment3 = new Apartment();
+  const apartment4 = new Apartment();
+  const apartment5 = new Apartment();
+  const apartment6 = new Apartment();
+  const apartment7 = new Apartment();
+  const apartment8 = new Apartment();
+  const apartment9 = new Apartment();
+  const apartment10 = new Apartment();
+  const apartment11 = new Apartment()
 
 
+  apartment.addPerson(john);
+  apartment.addPerson(mary);
+  apartment2.addPerson(jack);
+  apartment2.addPerson(luci);
+  apartment3.addPerson(mary);
+  apartment3.addPerson(paul);
+  apartment4.addPerson(chen);
 
-const John = new Person('John')
-const Mary = new Person('Mary')
+  apartment.showPeople(); 
+  
+  const building = new Building();
+  building.addApartment(apartment);
+  building.addApartment(apartment2);
+  building.addApartment(apartment3);
+  building.addApartment(apartment4);
+  building.addApartment(apartment5);
+  building.addApartment(apartment6);
+  building.addApartment(apartment7);
+  building.addApartment(apartment8);
+  building.addApartment(apartment9);
+  building.addApartment(apartment10);
+  building.addApartment(apartment11);
 
-const apartment1 = new Appartament()
-apartment1.addPeople(John)
-apartment1.addPeople(Mary)
-
-const apartment2 = new Appartament()
-const apartment3 = new Appartament()
-
-const building = new Building()
-
-building.addApp(apartment1)
-building.addApp(apartment2)
-
-console.log(apartment1.livingPeople)
-console.log(Appartament.showAppartment)
-console.log(Building.showBuilding)
+  building.showApartments(); 

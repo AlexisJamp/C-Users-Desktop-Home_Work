@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+}
+.category {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.products {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.product-info {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}

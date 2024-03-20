@@ -5,9 +5,9 @@ function showProducts(category) {
     productsElement.innerHTML = '';
 
     if (category === 'phones') {
-        productsElement.innerHTML = '<ul><li><a href="#" onclick="showProductInfo(\'iPhone\')">iPhone</a></li><li><a href="#" onclick="showProductInfo(\'Samsung\')">Samsung</a></li></ul>';
+        productsElement.innerHTML = '<h2>Produscts</h2><ul><li><a href="#" onclick="showProductInfo(\'iPhone\')">iPhone</a></li><li><a href="#" onclick="showProductInfo(\'Samsung\')">Samsung</a></li></ul>';
     } else if (category === 'laptops') {
-        productsElement.innerHTML = '<ul><li><a href="#" onclick="showProductInfo(\'MacBook\')">MacBook</a></li><li><a href="#" onclick="showProductInfo(\'Dell\')">Dell</a></li></ul>';
+        productsElement.innerHTML = '<h2>Products info</h2><ul><li><a href="#" onclick="showProductInfo(\'MacBook\')">MacBook</a></li><li><a href="#" onclick="showProductInfo(\'Dell\')">Dell</a></li></ul>';
     }
 }
 
@@ -59,5 +59,4 @@ function displayOrderInfo(fullName, city, deliveryAddress, paymentMethod, quanti
         </table>
     `;
     document.getElementById('productInfo').innerHTML = table;
-    
 }

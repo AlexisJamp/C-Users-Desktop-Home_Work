@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home work</title>
+</head>
+
+<body>
+    <h1>Home work 35</h1>
+    <div id="registrationForm">
+        <label for="firstName">First name:</label>
+        <input type="text" id="firstName"><br>
+    
+        <label for="lastName">Last name:</label>
+        <input type="text" id="lastName"><br>
+    
+        <label for="dob">Date of Birth:</label>
+        <input type="text" id="dob"><br>
+    
+        <label>Sex (male/female):</label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female<br>
+    
+        <label for="city">City:</label>
+        <select id="city">
+            <option value="kyiv">Kyiv</option>
+            <option value="odessa">Odessa</option>
+            <option value="washington">Washington</option>
+            <option value="quathar">Quathar</option>
+        </select><br>
+    
+        <label for="address">Address:</label>
+        <textarea id="address"></textarea><br>
+    
+        <label>Languages:</label><br>
+        <input type="checkbox" id="language1" value="ukrainian">
+        <label for="language1">Ukraine</label><br>
+        <input type="checkbox" id="language2" value="russian">
+        <label for="language2">English</label><br>
+        <input type="checkbox" id="language3" value="english">
+        <label for="language3">Poland</label><br>
+    
+        <button onclick="submitForm()">Safe data</button>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

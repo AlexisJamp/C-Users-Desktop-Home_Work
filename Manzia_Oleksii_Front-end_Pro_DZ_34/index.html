@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home work</title>
+</head>
+
+<body>
+    <h1>Home work 35</h1>
+    <div class="container">
+        <div class="category" id="categories">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#" onclick="showProducts('phones')">Phones</a></li>
+                <li><a href="#" onclick="showProducts('laptops')">Laptop's</a></li>
+            </ul>
+        </div>
+    
+
+        <div class="products" id="productList">
+            <h2>Produscts</h2>
+        </div>
+    
+        <div class="product-info" id="productInfo">
+            <h2>Products info</h2>
+        </div>
+    
+        <div class="order-form" id="orderForm" style="display: none;">
+            <h2>Order form</h2>
+            <form onsubmit="return validateOrder()">
+                <label for="fullName">First & Last name:</label><br>
+                <input type="text" id="fullName" name="fullName"><br><br>
+    
+                <label for="city">City:</label><br>
+                <select id="city" name="city">
+                    <option value="Odessa">Odessa</option>
+                    <option value="Kyiv">Kyiv</option>
+                    <option value="Nikolaev">Nikolaev</option>
+                </select><br><br>
+    
+                <label for="deliveryAddress">New Post address:</label><br>
+                <input type="text" id="deliveryAddress" name="deliveryAddress"><br><br>
+    
+                <label for="paymentMethod">Cash or card paiment:</label><br>
+                <input type="text" id="paymentMethod" name="paymentMethod"><br><br>
+    
+                <label for="quantity">Produscts quantity:</label><br>
+                <input type="number" id="quantity" name="quantity" min="1"><br><br>
+    
+                <label for="comment">Order comment:</label><br>
+                <textarea id="comment" name="comment"></textarea><br><br>
+    
+
+                <button onclick="displayOrderInfo()">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
